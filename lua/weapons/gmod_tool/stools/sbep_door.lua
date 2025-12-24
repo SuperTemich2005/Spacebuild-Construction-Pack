@@ -19,18 +19,6 @@ if CLIENT then
 	usermessage.Hook( "SBEPDoorToolError_cl" , SBEPDoorToolError )
 end
 
-local CategoryTable = {}
-CategoryTable[1] = {
-	{ name = "Doors"			, cat = "Door"	 	} ,
-	{ name = "Hatches (Base)" 	, cat = "Hatch_B"	} ,
-	{ name = "Hatches (Mid)" 	, cat = "Hatch_M"	} ,
-	{ name = "Hatches (Top)"	, cat = "Hatch_T"	} ,
-	{ name = "Other"			, cat = "Other"	 	}
-					}
-
-CategoryTable[2] = {
-	{ name = "ModBridge Doors"	, cat = "Modbridge" , model = "models/cerus/modbridge/misc/doors/door11a.mdl" 	 }
-					}
 
 TOOL.ClientConVar[ "skin"  		] = 0
 TOOL.ClientConVar[ "model"  	] = "models/smallbridge/panels/sbpaneldoor.mdl"
@@ -126,26 +114,30 @@ function TOOL.BuildCPanel( panel )
 	panel:SetName( "SBEP Door" )
 
 	local WireCheckBox = vgui.Create( "DCheckBoxLabel", panel )
-	WireCheckBox:Dock(TOP)
-	WireCheckBox:SetText( "Create Wire Inputs:" )
+	WireCheckBox:SetText( "Create Wire Inputs" )
 	WireCheckBox:SetTextColor(Color(0,0,0,255))
 	WireCheckBox:SetConVar( "sbep_door_wire" )
 	WireCheckBox:SetValue( GetConVar( "sbep_door_wire" ):GetBool() )
+	panel:AddItem(WireCheckBox)
 		
 	local UseCheckBox = vgui.Create( "DCheckBoxLabel", panel )
-	UseCheckBox:Dock(TOP)
-	UseCheckBox:SetText( "Enable Use Key:" )
+	UseCheckBox:SetText( "Enable Use Key" )
 	UseCheckBox:SetTextColor(Color(0,0,0,255))
 	UseCheckBox:SetConVar( "sbep_door_enableuse" )
 	UseCheckBox:SetValue( GetConVar( "sbep_door_enableuse" ):GetBool()  )
+	panel:AddItem(UseCheckBox)
 	
 	for Tab,v in pairs( DoorToolModels ) do
+		local CategoryLabel = vgui.Create("DLabel", panel)
+		CategoryLabel:SetText(Tab)
+		CategoryLabel:SetTextColor(v.Color)
+		panel:AddItem(CategoryLabel)
 		for Category, models in pairs( v ) do
+			if Category == "Color" then continue end
 			local catPanel = vgui.Create( "DCollapsibleCategory", panel )
-			catPanel:Dock( TOP )
-			catPanel:DockMargin(2,2,2,2)
 			catPanel:SetText(Category)
 			catPanel:SetLabel(Category)
+			panel:AddItem(catPanel)
 			
 			local grid = vgui.Create( "DGrid", catPanel )
 			grid:Dock( TOP )

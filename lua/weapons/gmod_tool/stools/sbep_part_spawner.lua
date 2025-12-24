@@ -101,12 +101,9 @@ function TOOL.BuildCPanel(panel)
 	
 	local SkinSelectorLabel = vgui.Create("DLabel", panel)
 	SkinSelectorLabel:SetText("SmallBridge skin:")
-	SkinSelectorLabel:Dock(TOP)
-	SkinSelectorLabel:DockMargin( 2,2,2,2 )
 	SkinSelectorLabel:SetTextColor(Color(0,0,0,255))
+	panel:AddItem(SkinSelectorLabel)
 	local SkinSelector = vgui.Create( "DComboBox", panel )
-	SkinSelector:Dock(TOP)
-	SkinSelector:DockMargin( 2,2,2,2 )
 	SkinSelector:SetValue( SkinTable[GetConVar("sbep_part_spawner_skin"):GetInt()] or SkinTable[1] )
 	SkinSelector.OnSelect = function( index, value, data )
 		RunConsoleCommand( "sbep_part_spawner_skin", value )
@@ -114,30 +111,38 @@ function TOOL.BuildCPanel(panel)
 	for k,v in pairs( SkinTable ) do
 		SkinSelector:AddChoice( v )
 	end
-	
+	panel:AddItem(SkinSelector)
+
 	local GlassButton = vgui.Create( "DCheckBoxLabel", panel )
-	GlassButton:Dock(TOP)
-	GlassButton:DockMargin(2,2,2,2)
 	GlassButton:SetValue( GetConVar( "sbep_part_spawner_glass" ):GetBool() )
 	GlassButton:SetText( "Spawn with Glass (for SmallBridge)" )
 	GlassButton:SetTextColor(Color(0,0,0,255))
 	GlassButton:SetConVar( "sbep_part_spawner_glass" )
+	panel:AddItem(GlassButton)
 	
-	local HabitableModuleButton = vgui.Create("DCheckBoxLabel", panel )
-	HabitableModuleButton:Dock(TOP)
-	HabitableModuleButton:DockMargin(2,2,2,2)
-	HabitableModuleButton:SetValue( GetConVar( "sbep_part_spawner_hab_mod" ):GetBool() )
-	HabitableModuleButton:SetText( "Spawn as Habitable Module" )
-	HabitableModuleButton:SetTextColor(Color(0,0,0,255))
-	HabitableModuleButton:SetConVar( "sbep_part_spawner_hab_mod" )
+	if CAF then
+		local HabitableModuleButton = vgui.Create("DCheckBoxLabel", panel )
+		HabitableModuleButton:SetValue( GetConVar( "sbep_part_spawner_hab_mod" ):GetBool() )
+		HabitableModuleButton:SetText( "Spawn as Habitable Module" )
+		HabitableModuleButton:SetTextColor(Color(0,0,0,255))
+		HabitableModuleButton:SetConVar( "sbep_part_spawner_hab_mod" )
+		panel:AddItem(HabitableModuleButton)
+	else
+		local NoHabLabel = vgui.Create("DLabel", panel)
+		NoHabLabel:SetText("No Spacebuild 3 installed, cannot create habitable modules.")
+		panel:AddItem(NoHabLabel)
+	end
 	
 	for Tab,v  in pairs( SmallBridgeModels ) do
+		local CategoryLabel = vgui.Create("DLabel", panel)
+		CategoryLabel:SetText(Tab)
+		CategoryLabel:SetTextColor(v.Color)
+		panel:AddItem(CategoryLabel)
 		for Category, models in pairs( v ) do
 			local catPanel = vgui.Create( "DCollapsibleCategory", panel )
-			catPanel:Dock( TOP )
-			catPanel:DockMargin(2,2,2,2)
 			catPanel:SetText(Category)
 			catPanel:SetLabel(Category)
+			panel:AddItem(catPanel)
 			
 			local grid = vgui.Create( "DGrid", catPanel )
 			grid:Dock( TOP )

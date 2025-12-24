@@ -21,13 +21,10 @@ DTT.SmallBridge["Doors"] = {
     "models/smallbridge/ship parts/sbhulldse.mdl",
     "models/smallbridge/ship parts/sbhulldseb.mdl",
     "models/smallbridge/ship parts/sbhulldst.mdl",
-    "models/smallbridge/ship parts/sbhulldsdwe.mdl",
-    "models/slyfo/slypaneldoor1.mdl",
-    "models/slyfo/doublehatch.mdl",
-    "models/sbep_community/d12mbsframe.mdl"
+    "models/smallbridge/ship parts/sbhulldsdwe.mdl"
 }
 
-DTT.SmallBridge["Hatches (Base)"] = {
+DTT.SmallBridge["Hatches"] = {
     "models/smallbridge/elevators_small/sbselevb.mdl",
     "models/smallbridge/elevators_small/sbselevbe.mdl",
     "models/smallbridge/elevators_small/sbselevbedh.mdl",
@@ -40,10 +37,8 @@ DTT.SmallBridge["Hatches (Base)"] = {
     "models/smallbridge/elevators_large/sblelevbedh.mdl",
     "models/smallbridge/elevators_large/sblelevbr.mdl",
     "models/smallbridge/elevators_large/sblelevbt.mdl",
-    "models/smallbridge/elevators_large/sblelevbx.mdl"
-}
+    "models/smallbridge/elevators_large/sblelevbx.mdl",
 
-DTT.SmallBridge["Hatches (Mid)"] = {
     "models/smallbridge/elevators_small/sbselevm.mdl",
     "models/smallbridge/elevators_small/sbselevme.mdl",
     "models/smallbridge/elevators_small/sbselevmedh.mdl",
@@ -56,10 +51,8 @@ DTT.SmallBridge["Hatches (Mid)"] = {
     "models/smallbridge/elevators_large/sblelevmedh.mdl",
     "models/smallbridge/elevators_large/sblelevmr.mdl",
     "models/smallbridge/elevators_large/sblelevmt.mdl",
-    "models/smallbridge/elevators_large/sblelevmx.mdl"
-}
+    "models/smallbridge/elevators_large/sblelevmx.mdl",
 
-DTT.SmallBridge["Hatches (Top)"] = {
     "models/smallbridge/elevators_small/sbselevt.mdl",
     "models/smallbridge/elevators_small/sbselevte.mdl",
     "models/smallbridge/elevators_small/sbselevtedh.mdl",
@@ -81,17 +74,34 @@ DTT.SmallBridge["Other"] = {
     "models/mandrac/smallbridgeaddon/2room.mdl"
 }
 
+DTT.SmallBridge.Color = Color(170, 140, 140, 255)
+
 DTT.ModBridge = {}
-DTT.ModBridge["ModBridge"] = {
+DTT.ModBridge["Doors"] = {
     "models/cerus/modbridge/misc/doors/door11a.mdl",
     "models/cerus/modbridge/misc/doors/door11b.mdl",
     "models/cerus/modbridge/misc/doors/door12b.mdl",
     "models/cerus/modbridge/misc/doors/door12a.mdl",
     "models/cerus/modbridge/misc/doors/door13a.mdl",
-    "models/cerus/modbridge/misc/doors/door23a.mdl",
-    "models/cerus/modbridge/misc/doors/door33a.mdl",
+    "models/cerus/modbridge/misc/doors/door23a.mdl"
+}
+DTT.ModBridge["Hatches"] = {
+    "models/cerus/modbridge/misc/doors/door33a.mdl"
+}
+DTT.ModBridge["Others"] = {
     "models/cerus/modbridge/misc/accessories/acc_furnace1.mdl"
 }
+DTT.ModBridge.Color = Color(140, 140, 170, 255)
+
+DTT.MedBridge = {}
+DTT.MedBridge["Doors"] = {
+    "models/slyfo/slypaneldoor1.mdl"
+}
+DTT.MedBridge["Hatches"] = {
+    "models/slyfo/doublehatch.mdl",
+    "models/sbep_community/d12mbsframe.mdl"
+}
+DTT.MedBridge.Color = Color(140, 170, 140, 255)
 
 for k, v in pairs(DTT) do
     list.Set("SBEP_DoorToolModels", k, v)
