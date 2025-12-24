@@ -3,7 +3,8 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local SMT = {}
 SMT.SmallBridge = {}
-SMT.SmallBridge["Hulls (SW)"] = {
+SMT.SmallBridge.Color = Color(170, 140, 140, 255)
+SMT.SmallBridge["Corridors (single-width)"] = {
     "models/smallbridge/hulls_sw/sbhullcurvel.mdl",
     "models/smallbridge/hulls_sw/sbhullcurvem.mdl",
     "models/smallbridge/hulls_sw/sbhullcurves.mdl",
@@ -40,7 +41,7 @@ SMT.SmallBridge["Hulls (SW)"] = {
     "models/smallbridge/hulls_sw/sbhullxdldw.mdl"
 }
 
-SMT.SmallBridge["Hulls (DW)"] = {
+SMT.SmallBridge["Corridors (double-width)"] = {
     "models/smallbridge/hulls_dw/sbhulldwe05.mdl",
     "models/smallbridge/hulls_dw/sbhulldwe1.mdl",
     "models/smallbridge/hulls_dw/sbhulldwe2.mdl",
@@ -67,39 +68,38 @@ SMT.SmallBridge["Hulls (DW)"] = {
     "models/smallbridge/hulls_dw/sbhulldwxdl.mdl"
 }
 
-SMT.SmallBridge["Ship Parts"] = {
-    "models/smallbridge/ship parts/sbcockpit1.mdl",
-    "models/smallbridge/ship parts/sbcockpit2.mdl",
-    "models/smallbridge/ship parts/sbcockpit2o.mdl",
-    "models/smallbridge/ship parts/sbcockpit2or.mdl",
-    "models/smallbridge/ship parts/sbcockpit3.mdl",
-    "models/smallbridge/ship parts/sbcockpit4.mdl",
-    "models/smallbridge/ship parts/sbcockpit5dw.mdl",
-    "models/smallbridge/ship parts/sbcockpith2.mdl",
-    "models/smallbridge/ship parts/sbcockpitw2h2.mdl",
-    "models/smallbridge/ship parts/sbengine1.mdl",
-    "models/smallbridge/ship parts/sbengine2.mdl",
-    "models/smallbridge/ship parts/sbengine2o.mdl",
-    "models/smallbridge/ship parts/sbengine2or.mdl",
-    "models/smallbridge/ship parts/sbengine3.mdl",
-    "models/smallbridge/ship parts/sbengine4dw.mdl",
-    "models/smallbridge/ship parts/sbengine4l.mdl",
-    "models/smallbridge/ship parts/sbengine4m.mdl",
-    "models/smallbridge/ship parts/sbengine4r.mdl",
-    "models/smallbridge/ship parts/sbengine42h.mdl",
-    "models/smallbridge/ship parts/sbengine5.mdl",
-    "models/smallbridge/ship parts/sbengine5dwdh.mdl",
-    "models/mandrac/smallbridgeaddon/sbenginemsw.mdl",
-    "models/mandrac/smallbridgeaddon/sbenginecdw.mdl",
-    "models/smallbridge/ship parts/sbenginebo.mdl",
-    "models/smallbridge/ship parts/sbhulldsdwe.mdl",
-    "models/smallbridge/ship parts/sbhulldsdwe2.mdl",
-    "models/smallbridge/ship parts/sbhulldse.mdl",
-    "models/smallbridge/ship parts/sbhulldse2.mdl",
-    "models/smallbridge/ship parts/sbhulldseb.mdl",
-    "models/smallbridge/ship parts/sbhulldsp.mdl",
-    "models/smallbridge/ship parts/sbhulldsp2.mdl",
-    "models/smallbridge/ship parts/sbhulldst.mdl",
+SMT.SmallBridge["Cockpits"] = {
+  "models/smallbridge/ship parts/sbcockpit1.mdl",
+  "models/smallbridge/ship parts/sbcockpit2.mdl",
+  "models/smallbridge/ship parts/sbcockpit2o.mdl",
+  "models/smallbridge/ship parts/sbcockpit2or.mdl",
+  "models/smallbridge/ship parts/sbcockpit3.mdl",
+  "models/smallbridge/ship parts/sbcockpit4.mdl",
+  "models/smallbridge/ship parts/sbcockpit5dw.mdl",
+  "models/smallbridge/ship parts/sbcockpith2.mdl",
+  "models/smallbridge/ship parts/sbcockpitw2h2.mdl",
+  "models/mandrac/smallbridgeaddon/sbcockpit3addon.mdl"
+}
+
+SMT.SmallBridge["Engines"] = {
+  "models/smallbridge/ship parts/sbengine1.mdl",
+  "models/smallbridge/ship parts/sbengine2.mdl",
+  "models/smallbridge/ship parts/sbengine2o.mdl",
+  "models/smallbridge/ship parts/sbengine2or.mdl",
+  "models/smallbridge/ship parts/sbengine3.mdl",
+  "models/smallbridge/ship parts/sbengine4dw.mdl",
+  "models/smallbridge/ship parts/sbengine4l.mdl",
+  "models/smallbridge/ship parts/sbengine4m.mdl",
+  "models/smallbridge/ship parts/sbengine4r.mdl",
+  "models/smallbridge/ship parts/sbengine42h.mdl",
+  "models/smallbridge/ship parts/sbengine5.mdl",
+  "models/smallbridge/ship parts/sbengine5dwdh.mdl",
+  "models/mandrac/smallbridgeaddon/sbenginemsw.mdl",
+  "models/mandrac/smallbridgeaddon/sbenginecdw.mdl",
+  "models/smallbridge/ship parts/sbenginebo.mdl"
+}
+
+SMT.SmallBridge["Ramps"] = {
     "models/smallbridge/ship parts/sblandramp.mdl",
     "models/smallbridge/ship parts/sblandrampdw.mdl",
     "models/smallbridge/ship parts/sblandrampdwdh.mdl",
@@ -108,11 +108,10 @@ SMT.SmallBridge["Ship Parts"] = {
     "models/smallbridge/ship parts/sblandramppdwdh.mdl",
     "models/smallbridge/ship parts/sblanduramp.mdl",
     "models/smallbridge/ship parts/sblandurampdw.mdl",
-    "models/smallbridge/ship parts/sblandurampdwdh.mdl",
-    "models/mandrac/smallbridgeaddon/sbcockpit3addon.mdl"
+    "models/smallbridge/ship parts/sblandurampdwdh.mdl"
 }
 
-SMT.SmallBridge["Splitters"] = {
+SMT.SmallBridge["Adapters"] = {
     "models/smallbridge/splitters/sbconvmb.mdl",
     "models/smallbridge/splitters/sbconvmbdh.mdl",
     "models/smallbridge/splitters/sbconvmbdw.mdl",
@@ -136,7 +135,7 @@ SMT.SmallBridge["Splitters"] = {
     "models/smallbridge/panels/2w2hsplitter2.mdl"
 }
 
-SMT.SmallBridge["Height Transfer"] = {
+SMT.SmallBridge["Height Transferers"] = {
     "models/smallbridge/height transfer/sbhtcramp.mdl",
     "models/smallbridge/height transfer/sbhtcramp2d.mdl",
     "models/smallbridge/height transfer/sbhtcramp2u.mdl",
@@ -159,6 +158,8 @@ SMT.SmallBridge["Height Transfer"] = {
 }
 
 SMT.SmallBridge["Panels"] = {
+    "models/smallbridge/ship parts/sbhulldsp.mdl",
+    "models/smallbridge/ship parts/sbhulldsp2.mdl",
     "models/smallbridge/panels/sbdoor.mdl",
     "models/smallbridge/panels/sbdoorsquare.mdl",
     "models/smallbridge/panels/sbdoorwide.mdl",
@@ -308,9 +309,15 @@ SMT.SmallBridge["Walkways"] = {
 }
 
 SMT.SmallBridge["Other"] = {
-    "models/smallbridge/other/sbconsole.mdl",
-    "models/smallbridge/other/sbconsolelow.mdl",
-    "models/smallbridge/other/sbconsoletop.mdl"
+  "models/smallbridge/other/sbconsole.mdl",
+  "models/smallbridge/other/sbconsolelow.mdl",
+  "models/smallbridge/other/sbconsoletop.mdl",
+  "models/smallbridge/ship parts/sbhulldsdwe.mdl",
+  "models/smallbridge/ship parts/sbhulldsdwe2.mdl",
+  "models/smallbridge/ship parts/sbhulldse.mdl",
+  "models/smallbridge/ship parts/sbhulldse2.mdl",
+  "models/smallbridge/ship parts/sbhulldseb.mdl",
+  "models/smallbridge/ship parts/sbhulldst.mdl"
 }
 
 SMT.SmallBridge["Wings"] = {
@@ -326,7 +333,7 @@ SMT.SmallBridge["Wings"] = {
     "models/smallbridge/wings/sbwings1r.mdl"
 }
 
-SMT.SmallBridge["Ships"] = {
+SMT.SmallBridge["Prefab Ships"] = {
     "models/smallbridge/ships/hysteria_galapagos.mdl",
     "models/smallbridge/ships/matthew0623_hydra.mdl",
     "models/smallbridge/ships/sbfrigate1.mdl",
@@ -364,7 +371,8 @@ for k, v in pairs(SMT) do
 end
 local SMT = {}
   SMT.ModBridge = {}
-    SMT.ModBridge["Hulls (MoB)"] =
+  SMT.ModBridge.Color = Color(140, 140, 170, 255)
+    SMT.ModBridge["Hulls"] =
   {
     "models/cerus/modbridge/core/cvw-11-31.mdl",
    
@@ -417,7 +425,7 @@ local SMT = {}
    
     "models/cerus/modbridge/core/tc-131.mdl"
   }
-  SMT.ModBridge["Spartan (MoB)"] =
+  SMT.ModBridge["Spartan"] =
   {
     "models/cerus/modbridge/core/spartan/c-111.mdl",
     "models/cerus/modbridge/core/spartan/c-221.mdl",
@@ -432,7 +440,7 @@ local SMT = {}
     "models/cerus/modbridge/core/spartan/s-321.mdl",
     "models/cerus/modbridge/core/spartan/s-331.mdl"
   }
-    SMT.ModBridge["Ship parts (MoB)"] =
+    SMT.ModBridge["Bridges"] =
   {
     "models/cerus/modbridge/core/g-211s.mdl",
     "models/cerus/modbridge/core/g-221.mdl",
@@ -442,7 +450,7 @@ local SMT = {}
     "models/cerus/modbridge/core/g-231s.mdl",
     "models/cerus/modbridge/core/g-231w.mdl"
   }
-    SMT.ModBridge["Height transfer (MoB)"] =
+    SMT.ModBridge["Height transferers"] =
   {
     "models/cerus/modbridge/core/rs-322.mdl",
     "models/cerus/modbridge/core/rs-332.mdl",
@@ -463,7 +471,7 @@ local SMT = {}
    
     "models/cerus/modbridge/core/r-312.mdl"
   }
-    SMT.ModBridge["Elevators (MoB)"] =
+    SMT.ModBridge["Elevators"] =
   {
     "models/cerus/modbridge/core/s-331eb.mdl",
     "models/cerus/modbridge/core/s-331em.mdl",
@@ -493,7 +501,7 @@ local SMT = {}
     "models/cerus/modbridge/misc/elevator/etm113.mdl",
     "models/cerus/modbridge/misc/elevator/etm113g.mdl"
   }
-  SMT.ModBridge["Other (MoB)"] =
+  SMT.ModBridge["Other"] =
   {
     "models/cerus/modbridge/core/prefab/crew_331.mdl",
     "models/cerus/modbridge/core/cv-mb-smb.mdl"
@@ -504,8 +512,10 @@ for k,v in pairs( SMT ) do
 end
 local SMT = {}
   SMT.MedBridge = {}
-  SMT.MedBridge["MedBridge Hulls"] =
+  SMT.MedBridge.Color = Color(140, 170, 140, 255)
+  SMT.MedBridge["Hulls"] =
   {
+    "models/sbep_community/d12mbcubconsingle.mdl",
   	"models/sbep_community/d12mbsframe.mdl",
 	"models/slyfo/angledown.mdl",
 	"models/slyfo/angleup.mdl",
@@ -582,10 +592,10 @@ local SMT = {}
 	"models/spacebuild/nova/hull_lift1.mdl",
 	"models/spacebuild/nova/hull_lift_double.mdl",
 	"models/twinbladetm/enginecontrolmk2.mdl",
-	"models/twinbladetm/entrymk2.mdl",
+	"models/twinbladetm/entrymk2.mdl"
 
   }
-  SMT.MedBridge["Medbridge2 Hulls"] =
+  SMT.MedBridge["Alt. Hulls"] =
   {
   "models/spacebuild/MedBridge2_emptyhull.mdl",
   "models/spacebuild/MedBridge2_emptyhull_90.mdl",
@@ -600,9 +610,9 @@ local SMT = {}
   "models/spacebuild/medbridge2_singletodoublehull.mdl",
   "models/spacebuild/medbridge2_stackdoublehull.mdl",
   "models/spacebuild/medbridge2_stackdoublehull_ramp.mdl",
-  "models/spacebuild/medbridge2_widey.mdl",
+  "models/spacebuild/medbridge2_widey.mdl"
   }
-  SMT.MedBridge["MedBridge Decks"] = 
+  SMT.MedBridge["Decks"] = 
   {
 	"models/slyfo/fdeck_long_invert.mdl",
 	"models/slyfo/fdeck_long.mdl",
@@ -614,77 +624,82 @@ local SMT = {}
 	"models/slyfo/fdeck_shortramp_invert.mdl",
 	"models/slyfo/fdeck_shortramp_invertbottom.mdl",
 	"models/slyfo/fdeck_shortramp_invertbottomdual.mdl",
-	"models/slyfo/fdeck_shorttop.mdl",
+	"models/slyfo/fdeck_shorttop.mdl"
   }
-  SMT.MedBridge["MedBridge Ship Parts"]=
+
+  SMT.MedBridge["Cockpits"] = {
+    "models/sbep_community/d12mbbridge.mdl",
+    "models/sbep_community/d12mbdome.mdl",
+    "models/slyfo/biodome.mdl",
+    "models/slyfo/cockpit_lground.mdl",
+    "models/slyfo/cockpit_sideround.mdl",
+    "models/slyfo/cockpit_smround.mdl",
+    "models/slyfo/combat_cockpit_small.mdl",
+    "models/slyfo/cruisercockpit.mdl",
+    "models/slyfo/gallant_cockpitdoublehuge.mdl",
+    "models/slyfo/sccleft.mdl", 
+    "models/slyfo/sccright.mdl",
+    "models/slyfo/sidecockpit.mdl",
+    "models/spacebuild/nova/plowbridge.mdl",
+    "models/spacebuild/nova/supercarrierbridge.mdl",
+    "models/spacebuild/nova/tallbridge.mdl",
+    "models/twinbladetm/plowbridgemk2.mdl"
+  }
+  SMT.MedBridge["Engines"] = {
+    "models/punisher239/punisher239_engine_lms.mdl",
+    "models/sbep_community/d12singengine.mdl",
+    "models/slyfo/gallant_class_engine1.mdl",
+    "models/slyfo/gallant_class_engine2.mdl",
+    "models/slyfo/gallant_class_engine3.mdl",
+    "models/slyfo/gallant_class_engine4.mdl",
+    "models/slyfo/gallant_class_engine5.mdl",
+    "models/slyfo/gallant_class_engine6.mdl",
+    "models/slyfo/matthewengineshort.mdl",
+    "models/slyfo/matthewenginelong.mdl",
+    "models/slyfo_2/engine_sa_dp1_doublenoramp.mdl",
+    "models/slyfo_2/engine_sa_dp1_doubleramp.mdl",
+    "models/slyfo_2/engine_sa_dp1_huge1.mdl",
+    "models/slyfo_2/engine_sa_dp1_huge2.mdl",
+    "models/slyfo_2/engine_sa_dp1_huge3.mdl",
+    "models/slyfo_2/engine_sa_dp1_single1.mdl",
+    "models/slyfo_2/engine_sa_dp1_single2.mdl",
+    "models/slyfo_2/engine_sa_dp1_single3.mdl",
+    "models/slyfo_2/hull_singugen.mdl",
+    "models/slyfo_2/hull_singugeninv.mdl",
+    "models/slyfo_2/hull_singugenwide.mdl",
+    "models/slyfo_2/hull_singugenwideinv.mdl",
+    "models/twinbladetm/enginemk2.mdl"
+  }
+  SMT.MedBridge["Ship Parts"]=
   {
-	"models/punisher239/punisher239_engine_lms.mdl",
-	"models/sbep_community/d12mbbridge.mdl",
-	"models/sbep_community/d12mbcubconsingle.mdl",
-	"models/sbep_community/d12mbdome.mdl",
-	"models/sbep_community/d12singengine.mdl",
 	"models/slyfo/airlock.mdl",
-	"models/slyfo/biodome.mdl",
-	"models/slyfo/cockpit_lground.mdl",
-	"models/slyfo/cockpit_sideround.mdl",
-	"models/slyfo/cockpit_smround.mdl",
-	"models/slyfo/combat_cockpit_small.mdl",
-	"models/slyfo/cruisercockpit.mdl",
-	"models/slyfo/gallant_class_engine1.mdl",
-	"models/slyfo/gallant_class_engine2.mdl",
-	"models/slyfo/gallant_class_engine3.mdl",
-	"models/slyfo/gallant_class_engine4.mdl",
-	"models/slyfo/gallant_class_engine5.mdl",
-	"models/slyfo/gallant_class_engine6.mdl",
-	"models/slyfo/gallant_cockpitdoublehuge.mdl",
-	"models/slyfo/matthewengineshort.mdl",
-	"models/slyfo/matthewenginelong.mdl",
-	"models/slyfo/sccleft.mdl",
-	"models/slyfo/sccright.mdl",
-	"models/slyfo/sidecockpit.mdl",
 	"models/slyfo/thcockpit.mdl",
-	"models/slyfo_2/engine_sa_dp1_doublenoramp.mdl",
-	"models/slyfo_2/engine_sa_dp1_doubleramp.mdl",
-	"models/slyfo_2/engine_sa_dp1_huge1.mdl",
-	"models/slyfo_2/engine_sa_dp1_huge2.mdl",
-	"models/slyfo_2/engine_sa_dp1_huge3.mdl",
-	"models/slyfo_2/engine_sa_dp1_single1.mdl",
-	"models/slyfo_2/engine_sa_dp1_single2.mdl",
-	"models/slyfo_2/engine_sa_dp1_single3.mdl",
-	"models/slyfo_2/hull_singugen.mdl",
-	"models/slyfo_2/hull_singugeninv.mdl",
-	"models/slyfo_2/hull_singugenwide.mdl",
-	"models/slyfo_2/hull_singugenwideinv.mdl",
 	"models/spacebuild/nova/braudside1.mdl",
 	"models/spacebuild/nova/crewquarters.mdl",
-	"models/spacebuild/nova/plowbridge.mdl",
-	"models/spacebuild/nova/supercarrierbridge.mdl",
-	"models/spacebuild/nova/tallbridge.mdl",
-	"models/twinbladetm/centralcontrol.mdl",
-	"models/twinbladetm/enginemk2.mdl",
-	"models/twinbladetm/plowbridgemk2.mdl",
+	"models/twinbladetm/centralcontrol.mdl"
   }
-  SMT.MedBridge["Medbridge2 Ship Parts"] =
-  {
-  "models/spacebuild/medbridge.mdl",
-  "models/spacebuild/medbridge2.mdl",
-  "models/spacebuild/medbridge2_360view_doublebridge.mdl",
-  "models/spacebuild/medbridge2_angularbridge.mdl",
-  "models/spacebuild/medbridge2_engineaddon1.mdl",
-  "models/spacebuild/medbridge2_enginedoublehull2_narrow.mdl",
-  "models/spacebuild/medbridge2_enginedoublehull2_wide.mdl",
-  "models/spacebuild/medbridge2_enginedoublehull_flaps.mdl",
-  "models/spacebuild/medbridge2_enginehull.mdl",
-  "models/spacebuild/medbridge2_enginehull2.mdl",
-  "models/spacebuild/medbridge2_enginehull3.mdl",
-  "models/spacebuild/medbridge2_enginehull4.mdl",
-  "models/spacebuild/medbridge2_longbridge.mdl",
-  "models/spacebuild/medbridge2_midsection_doublebridge.mdl",
-  "models/spacebuild/medbridge2_midsection_doublebridge2.mdl",
-  "models/spacebuild/medbridge2_midsectionbridge.mdl",
-  "models/spacebuild/medbridge2_twolevel.mdl",
+  SMT.MedBridge["Alt. Cockpits"] = {
+    "models/spacebuild/medbridge.mdl",
+    "models/spacebuild/medbridge2.mdl",
+    "models/spacebuild/medbridge2_360view_doublebridge.mdl",
+    "models/spacebuild/medbridge2_angularbridge.mdl",
+    "models/spacebuild/medbridge2_longbridge.mdl",
+    "models/spacebuild/medbridge2_midsection_doublebridge.mdl",
+    "models/spacebuild/medbridge2_midsection_doublebridge2.mdl",
+    "models/spacebuild/medbridge2_midsectionbridge.mdl",
+    "models/spacebuild/medbridge2_twolevel.mdl",
   }
-  SMT.MedBridge["MedBridge Hangars"] = 
+  SMT.MedBridge["Alt. Engines"] = {
+    "models/spacebuild/medbridge2_engineaddon1.mdl",
+    "models/spacebuild/medbridge2_enginedoublehull2_narrow.mdl",
+    "models/spacebuild/medbridge2_enginedoublehull2_wide.mdl",
+    "models/spacebuild/medbridge2_enginedoublehull_flaps.mdl",
+    "models/spacebuild/medbridge2_enginehull.mdl",
+    "models/spacebuild/medbridge2_enginehull2.mdl",
+    "models/spacebuild/medbridge2_enginehull3.mdl",
+    "models/spacebuild/medbridge2_enginehull4.mdl",
+  }
+  SMT.MedBridge["Hangars"] = 
   {
   "models/slyfo/capturehull1.mdl",
   "models/slyfo/doubleclamp.mdl",
@@ -696,7 +711,7 @@ local SMT = {}
   "models/slyfo/side_pod.mdl",
   "models/twinbladetm/hangarmk2.mdl",
   }
-  SMT.MedBridge["MedBridge2 Hangars"] =
+  SMT.MedBridge["Alt. Hangars"] =
   {
   "models/spacebuild/medbridge2_fighterbay.mdl",
   "models/spacebuild/medbridge2_fighterbay2.mdl",
@@ -707,7 +722,7 @@ local SMT = {}
   "models/spacebuild/medbridge2_fighterbay_noglass.mdl",
   "models/spacebuild/medbridge2_doublehull_hanger_elevator.mdl",
   }
-  SMT.MedBridge["MedBridge Other"] =
+  SMT.MedBridge["Other"] =
   {
   "models/cerus/weapons/plas_cannon.mdl",
   "models/kriegshield/ksjuncr.mdl",
@@ -928,9 +943,6 @@ local SMT = {}
   "models/spacebuild/nova/wallscreens1.mdl",
   "models/twinbladetm/cryotube.mdl",
   "models/twinbladetm/cryotubemkii.mdl",
-  }
-  SMT.MedBridge["Medbridge2 Other"] =
-  {
   "models/spacebuild/cannon1_gen.mdl",
   "models/spacebuild/doorway_invert.mdl",
   "models/spacebuild/dronefighter_1.mdl",

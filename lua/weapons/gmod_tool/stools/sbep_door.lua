@@ -128,7 +128,7 @@ function TOOL.BuildCPanel( panel )
 	panel:AddItem(UseCheckBox)
 	
 	for Tab,v in pairs( DoorToolModels ) do
-		local CategoryLabel = vgui.Create("DLabel", panel)
+		local CategoryLabel = vgui.Create("SCEP_PartSpawner_BridgeSeparator", panel)
 		CategoryLabel:SetText(Tab)
 		CategoryLabel:SetTextColor(v.Color)
 		panel:AddItem(CategoryLabel)

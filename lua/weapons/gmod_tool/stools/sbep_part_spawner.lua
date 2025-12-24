@@ -25,6 +25,39 @@ if CLIENT then
 			end
 		end
 	end)
+
+	local SCEPanel = {}
+	surface.CreateFont( "SCEPanelCustomFont", {
+		font = "Arial", -- Use the font-name which is shown to you by your operating system Font Viewer.
+		extended = false,
+		size = 24,
+		weight = 1100,
+		blursize = 0,
+		scanlines = 0,
+		antialias = true,
+		underline = false,
+		italic = false,
+		strikeout = false,
+		symbol = false,
+		rotary = false,
+		shadow = false,
+		additive = false,
+		outline = false,
+	} )
+	function SCEPanel:Init()
+
+	end
+	function SCEPanel:SetText(text)
+		self.text = text
+	end
+	function SCEPanel:SetTextColor(color)
+		self.color = color
+	end
+	function SCEPanel:Paint(w,h)
+		draw.RoundedBox(5,0,0,w,h,self.color)
+		draw.DrawText(self.text,"SCEPanelCustomFont",w/2,0,Color(240,240,240,255),TEXT_ALIGN_CENTER)
+	end
+	vgui.Register("SCEP_PartSpawner_BridgeSeparator",SCEPanel,"Panel")
 end
 
 TOOL.ClientConVar["model"] = "models/smallbridge/hulls_sw/sbhulle1.mdl"
@@ -134,11 +167,12 @@ function TOOL.BuildCPanel(panel)
 	end
 	
 	for Tab,v  in pairs( SmallBridgeModels ) do
-		local CategoryLabel = vgui.Create("DLabel", panel)
+		local CategoryLabel = vgui.Create("SCEP_PartSpawner_BridgeSeparator", panel)
 		CategoryLabel:SetText(Tab)
 		CategoryLabel:SetTextColor(v.Color)
 		panel:AddItem(CategoryLabel)
 		for Category, models in pairs( v ) do
+			if Category == "Color" then continue end
 			local catPanel = vgui.Create( "DCollapsibleCategory", panel )
 			catPanel:SetText(Category)
 			catPanel:SetLabel(Category)

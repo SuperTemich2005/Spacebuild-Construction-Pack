@@ -443,7 +443,7 @@ if CLIENT then
 		UseCheckBoxA:SetText( "No Collide Parts" )
 		UseCheckBoxA:SetTextColor( Color( 0,0,0,255 ) )
 		UseCheckBoxA:SetConVar( "sbep_part_assembler_nocollide" )
-		UseCheckBoxA:SetValue( 0 )
+		UseCheckBoxA:SetValue( 1 )
 		
 		local UseCheckBoxB = vgui.Create( "DCheckBoxLabel", panel )
 		UseCheckBoxB:DockMargin( 5,5,5,5 )
@@ -451,6 +451,6 @@ if CLIENT then
 		UseCheckBoxB:SetText( "Weld Parts" )
 		UseCheckBoxB:SetTextColor( Color( 0,0,0,255 ) )
 		UseCheckBoxB:SetConVar( "sbep_part_assembler_weld" )
-		UseCheckBoxB:SetValue( 0 )
+		UseCheckBoxB:SetValue( 1 )
 	end
 end
