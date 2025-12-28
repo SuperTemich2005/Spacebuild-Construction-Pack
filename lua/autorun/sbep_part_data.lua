@@ -385,8 +385,14 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "SWSH", pos = Vector(111.6, 0, 0), dir = Angle(0, 0, 0) },
             { type = "SWSH", pos = Vector(-111.6, 0, 0), dir = Angle(0, 180, 0) }
         },
-        ["models/smallbridge/ship parts/sbhulldsp.mdl"] = {},
-        ["models/smallbridge/ship parts/sbhulldsp2.mdl"] = {},
+        ["models/smallbridge/ship parts/sbhulldsp.mdl"] = {
+            { type = "SWSH", pos = Vector(-112,-93,0), dir = Angle(0,0,0)},
+            { type = "SWSH", pos = Vector(112,-93,0), dir = Angle(0,180,0)}
+        },
+        ["models/smallbridge/ship parts/sbhulldsp2.mdl"] = {
+            { type = "SWSH", pos = Vector(-223,-93,0), dir = Angle(0,0,0)},
+            { type = "SWSH", pos = Vector(223,-93,0), dir = Angle(0,180,0)}
+        },
         ["models/smallbridge/ship parts/sbhulldst.mdl"] = {
             { type = "SWSH", pos = Vector(111.6, 0, 0), dir = Angle(0, 0, 0) },
             { type = "SWSH", pos = Vector(-111.6, 0, 0), dir = Angle(0, 180, 0) },
@@ -437,7 +443,11 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "SWDH", pos = Vector(-4.65, 111.6, 65.1), dir = Angle(0, 180, 0) },
             { type = "SWDH", pos = Vector(-4.65, -111.6, 65.1), dir = Angle(0, 180, 0) }
         },
-        ["models/mandrac/smallbridgeaddon/2room.mdl"] = { { type = "INSR", pos = Vector(0, 0, 65.1), dir = Angle(0, 180, 0) } },
+        ["models/mandrac/smallbridgeaddon/2room.mdl"] = { 
+            { type = "INSR", pos = Vector(0, 0, 65.1), dir = Angle(0, 180, 0) },
+            { type = "DWSH", pos = Vector(111.6, 0, 0), dir = Angle(0, 0, 0) },
+            { type = "DWSH", pos = Vector(-111.6, 0, 0), dir = Angle(0, 180, 0) }
+        },
         ["models/mandrac/smallbridgeaddon/sbcockpit3addon.mdl"] = { { type = "INSR", pos = Vector(0, 0, 65.1), dir = Angle(0, 180, 0) } },
         ----------------------------------------------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------------------------------------------
@@ -637,10 +647,18 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
         },
         ----------------------------------------------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------------------------------------------
-        ["models/smallbridge/panels/sbdoor.mdl"] = {},
-        ["models/smallbridge/panels/sbdoorsquare.mdl"] = {},
-        ["models/smallbridge/panels/sbdoorwide.mdl"] = {},
-        ["models/smallbridge/panels/sbpaneldbsmall.mdl"] = {},
+        ["models/smallbridge/panels/sbdoor.mdl"] = {
+            { type = "SWSH", pos = Vector(0, 0, 0), dir = Angle(0, 0, 0) }
+        },
+        ["models/smallbridge/panels/sbdoorsquare.mdl"] = {
+            { type = "SWSH", pos = Vector(0, 0, 0), dir = Angle(0, 0, 0) }
+        },
+        ["models/smallbridge/panels/sbdoorwide.mdl"] = {
+            { type = "DWSH", pos = Vector(0, 0, 0), dir = Angle(0, 0, 0) }
+        },
+        ["models/smallbridge/panels/sbpaneldbsmall.mdl"] = {
+            { type = "SWSH", pos = Vector(0, 0, 0), dir = Angle(0, 0, 0) }
+        },
         ["models/smallbridge/panels/sbpaneldh.mdl"] = {
             { type = "SWDH", pos = Vector(0, 0, 65.1), dir = Angle(0, 0, 0) },
             { type = "SWDH", pos = Vector(0, 0, 65.1), dir = Angle(0, 180, 0) }
@@ -701,7 +719,10 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "DWSH", pos = Vector(0, 0, 0), dir = Angle(0, 0, 0) },
             { type = "DWSH", pos = Vector(0, 0, 0), dir = Angle(0, 180, 0) }
         },
-        ["models/smallbridge/panels/sbpaneliris.mdl"] = {},
+        ["models/smallbridge/panels/sbpaneliris.mdl"] = {
+            { type = "SWSH", pos = Vector(0, 0, 0), dir = Angle(0, 0, 0) },
+            { type = "SWSH", pos = Vector(0, 0, 0), dir = Angle(0, 180, 0) }
+        },
         ["models/smallbridge/panels/sbpanelsolid.mdl"] = {
             { type = "SWSH", pos = Vector(0, 0, 0), dir = Angle(0, 0, 0) },
             { type = "SWSH", pos = Vector(0, 0, 0), dir = Angle(0, 180, 0) }
@@ -1274,6 +1295,18 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "MBSH", pos = Vector(0, -256.0, 0), dir = Angle(0, 270, 0) },
             { type = "MBSH", pos = Vector(0, 256.0, 0), dir = Angle(0, 90, 0) }
         },
+        ["models/slyfo/smuggler_single.mdl"] = {
+            { type = "MBSH", pos = Vector(256,0,0), dir = Angle(0, 0, 0) },
+            { type = "MBSH", pos = Vector(-256,0,0), dir = Angle(0, 180, 0) }
+        },
+        ["models/slyfo/smuggler_single2.mdl"] = {
+            { type = "MBSH", pos = Vector(256,0,0), dir = Angle(0, 0, 0) },
+            { type = "MBSH", pos = Vector(-256,0,0), dir = Angle(0, 180, 0) }
+        },
+        ["models/slyfo/smuggler_single3.mdl"] = {
+            { type = "MBSH", pos = Vector(256,0,0), dir = Angle(0, 0, 0) },
+            { type = "MBSH", pos = Vector(-256,0,0), dir = Angle(0, 180, 0) }
+        },
         ["models/slyfo/ljoint.mdl"] = {
             { type = "MBSH", pos = Vector(-226.0, -29.0, 0), dir = Angle(0, 180, 0) },
             { type = "MBSH", pos = Vector(29.0, 226.0, 0), dir = Angle(0, 90, 0) }
@@ -1292,8 +1325,8 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
         ["models/slyfo/longlass.mdl"] = { { type = "MBSH", pos = Vector(0, 256.0, 0), dir = Angle(0, 90, 0) } },
         ["models/slyfo/longnoglass.mdl"] = { { type = "MBSH", pos = Vector(0, 256.0, 0), dir = Angle(0, 90, 0) } },
         ["models/slyfo/inversebay.mdl"] = {
-            { type = "MBSH", pos = Vector(256.0, 0, 6.0), dir = Angle(0, 0, 180) },
-            { type = "MBSH", pos = Vector(-256.0, 0, 6.0), dir = Angle(0, 180, 180) }
+            { type = "MBSH", pos = Vector(256.0, 0, 6.0), dir = Angle(0, 0, 0) },
+            { type = "MBSH", pos = Vector(-256.0, 0, 6.0), dir = Angle(0, 180, 0) }
         },
         ["models/slyfo/mcpdropbay.mdl"] = {
             { type = "MBSH", pos = Vector(256.0, 0, 8.0), dir = Angle(0, 0, 0) },
@@ -1342,6 +1375,14 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "MBSH", pos = Vector(0, -256.0, -128.0), dir = Angle(0, 270, 180) },
             { type = "MBSH", pos = Vector(0, 256.0, -128.0), dir = Angle(0, 90, 180) }
         },
+        ["models/spacebuild/nova/plowbridge.mdl"] = {
+            { type = "MBSH", pos = Vector(2,-206,0), dir = Angle(0,270,0)},
+            { type = "MBSH", pos = Vector(2,-206,-256), dir = Angle(0,270,0)}
+        },
+        ["models/twinbladetm/plowbridgemk2.mdl"] = {
+            { type = "MBSH", pos = Vector(-400,0,128), dir = Angle(0,180,0)},
+            { type = "MBSH", pos = Vector(-400,0,-128), dir = Angle(0,180,0)} 
+        },
         ["models/slyfo/doublehullramp.mdl"] = {
             { type = "MBSH", pos = Vector(256.0, 0, 128.0), dir = Angle(0, 0, 0) },
             { type = "MBSH", pos = Vector(-256.0, 0, 128.0), dir = Angle(0, 180, 0) },
@@ -1381,8 +1422,8 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "MBSH", pos = Vector(277.0, 0, -127.0), dir = Angle(0, 0, 180) }
         },
         ["models/slyfo/inverter.mdl"] = {
-            { type = "MBSH", pos = Vector(0, -256.0, 0), dir = Angle(0, 270, 0) },
-            { type = "MBSH", pos = Vector(0, 256.0, 0), dir = Angle(0, 90, 180) }
+            { type = "MBSH", pos = Vector(0, -256.0, 0), dir = Angle(0, 270, 180) },
+            { type = "MBSH", pos = Vector(0, 256.0, 0), dir = Angle(0, 90, 0) }
         },
         ["models/slyfo/hangar2.mdl"] = {
             { type = "MBSH", pos = Vector(128.0, 0, 128.0), dir = Angle(0, 0, 0) },
