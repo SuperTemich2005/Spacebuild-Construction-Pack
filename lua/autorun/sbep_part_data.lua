@@ -1343,8 +1343,8 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "MBSH", pos = Vector(-256, 0, -124), dir = Angle(0,-180,0) }
         },
         ["models/spacebuild/medbridge2_engineaddon1.mdl"] = {
-            { type = "MBSH", pos = Vector(256, 0, 128), dir = Angle(0,0,0) },
-            { type = "MBSH", pos = Vector(-256, 0, 128), dir = Angle(0,180,0) }
+            { type = "MBSH", pos = Vector(256, 0, 128), dir = Angle(0,180,0) },
+            { type = "MBSH", pos = Vector(-256, 0, 128), dir = Angle(0,0,0) }
         },
         ["models/spacebuild/medbridge2_enginedoublehull2_wide.mdl"]  = {
             { type = "MBSH", pos = Vector(-256, 0, 132), dir = Angle(0,180,0) },
@@ -1389,8 +1389,8 @@ are all one -orientation - only.Then open cl_init .lua and make a new entry in t
             { type = "MBSH", pos = Vector(-796, 0, 123), dir = Angle(0,-180,0) } 
         },
         ["models/spacebuild/medbridge2_fighterbay3a.mdl"] = {
-            { type = "MBSH", pos = Vector(283, 0, 125), dir = Angle(0,-180,0) },
-            { type = "MBSH", pos = Vector(-800, 0, 125), dir = Angle(0,0,0) }
+            { type = "MBSH", pos = Vector(283, 0, 125), dir = Angle(0,0,0) },
+            { type = "MBSH", pos = Vector(-800, 0, 125), dir = Angle(0,180,0) }
         },
         ["models/spacebuild/medbridge2_doublehull_hanger_elevator.mdl"] = {
             { type = "MBSH", pos = Vector(-384, -205, -128), dir = Angle(0,180,0) },
